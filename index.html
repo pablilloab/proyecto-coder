@@ -17,9 +17,29 @@
             <li>Log Out</li>
         </ul>
     </header>
-    <div id="product-wrapper">
 
+
+    <form id="data">
+        <h1>Ingrese los datos del articulo</h1>
+        <input type="text" id="nombre" placeholder="Ingrese el nombre del articulo">
+        <input type="text" id="codigo" placeholder="Ingrese el codigo del articulo">
+        <input type="text" id="descripcion" placeholder="Ingrese la descripcion el articulo">
+        <input type="text" id="precio" placeholder="Ingres el precio del articulo">
+        <input type="text" id="imagen" placeholder="Ingrese la ruta de la imagen">
+        <input type="submit" id="enviar">
+
+    </form>
+
+    <h1>Listado de articulos, click para borrar</h1>
+
+    <section>
+        <button id="listar">Actualizar Lista</button>
+    </section>
+
+    <div id="product-wrapper">
+        <div id="vacio">Sin articulos</div>
     </div>
+
     <footer>
         <div>
             <img src="#" alt="">
@@ -29,6 +49,9 @@
 
 
     <script src="./main.js"></script>
+    <script src="./addProduct.js"></script>
+    <script src="./listProducts.js"></script>
+    <script src="./deleteProduct.js"></script>
 </body>
 
 </html>

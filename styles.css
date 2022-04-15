@@ -133,3 +133,99 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+
+header {
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex: 3;
+    margin: 0 auto;
+    background-color: aquamarine;
+    width: 85vw;
+    height: 30px;
+}
+
+header h1 {
+    margin-top: 25px;
+}
+
+header ul {
+    display: flex;
+}
+
+header ul li {
+    margin-right: 15px;
+}
+
+section {
+    width: 85vw;
+    margin: 15px auto 0 auto;
+    display: flex;
+    justify-content: center;
+
+}
+
+#listar {
+    background-color: black;
+    color: aqua;
+    height: 20px;
+
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    margin: 0 auto;
+    padding: 15px;
+
+}
+
+form input {
+    margin-bottom: 15px;
+    width: 100%;
+    height: 25px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+#enviar {
+    width: 50%;
+    color: white;
+    background-color: brown;
+    border: 1px solid;
+}
+
+#product-wrapper {
+    width: 85vw;
+    margin: 0 auto;
+}
+
+.product-card {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 25px;
+    background-color: grey;
+
+
+}
+
+.product-card img {
+    width: 100px;
+    height: auto;
+
+}
+
+#vacio {
+    color: red;
+    font-size: 15px;
+    text-align: center;
+    background-color: aquamarine;
+    margin-top: 25px;
+}

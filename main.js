@@ -5,33 +5,20 @@ class Articulo {
     precio = 0;
     imagen = '';
     
+    
 
     
-    constructor (nombre, codigo, descripcion, precio) {
+    constructor (nombre, codigo, descripcion, precio, imagen) {
         this.nombre = nombre;
-        this.codigo = parseInt(codigo);
+        this.codigo = codigo;
         this.descripcion = descripcion;
-        this.precio = parseFloat(precio);
+        this.precio = precio;
+        this.imagen = imagen;
     }
     
 }
 
-const productosParaVender = [
-    {
-        nombre:"Arroz",
-        codigo:2222,
-        descripcion:"Arroz Gallo Integral",
-        precio:65.30,
-        imagen:'../img/arroz.jpg'
-    },
-    {
-        nombre:"Harina",
-        codigo:1111,
-        descripcion:"Harina 0000",
-        precio:35,
-        imagen:'../img/harina.jpg'
-    }
-]
+const productosParaVender = []
 
 function buscarArticulo (codigo) {
     for (const producto of productosParaVender) {
@@ -48,35 +35,25 @@ function listarArticulos () {
     }
 }
 
-listarArticulos();
 
-function cargarArticulo () {
-    let nombre = prompt("Ingrese el nombre del articulo");
-    let codigo = parseInt(prompt("Ingrese el codigo del articulo"));
-    let descripcion;
-    let precio;
-    let imagen;
 
+function cargarArticulo (nombre, codigo, descripcion, precio, imagen) {
     if (buscarArticulo(codigo) === -1) {
-        descripcion = prompt("Ingrese una breve descripcion del articulo");
-        precio = prompt("Ingrese el precio del articulo");
-        imagen = prompt("Ingrese la ruta de la imagen del articulo (../assets/camisa.jpg)");
-        productosParaVender.push(new Articulo(nombre,codigo,descripcion,precio,imagen));
-        
+        productosParaVender.push(new Articulo(nombre,codigo,descripcion,precio,imagen));  
+        return true;        
     }else{
-        alert("El articulo ya se encuentra en la base de datos")
+        alert("El articulo ya se encuentra en la base de datos");
+        return false;
     }    
 }
 
-cargarArticulo();
 
-
-function borrarArticulo () {    
-    let codigoArticulo = parseInt(prompt("Ingrese el codigo del articulo a borrar"));
+function borrarArticulo (codigo) {    
+    
     if (productosParaVender.length === 0) {
         alert("No existen productos en la base de datos")
     }else{
-        let indice = buscarArticulo(codigoArticulo);
+        let indice = buscarArticulo(codigo);
         if (indice !== -1) {
             productosParaVender.splice(indice,1)
             alert ("El articulo ha sido borrado correctamente");
@@ -86,8 +63,6 @@ function borrarArticulo () {
     }   
 }
 
-
-borrarArticulo();
 
 function actualizarArticulo () {
     let codigoArticulo = parseInt(prompt("Ingrese el codigo del articulo a actualizar"));
@@ -106,8 +81,6 @@ function actualizarArticulo () {
         }   
     }
 }
-
-actualizarArticulo();
 
 
 
