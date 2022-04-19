@@ -1,2 +1,2 @@
-# proyecto-coder
-Simulador de carga de articulos.
+# ChallengeONE-Ecommerce
+E-Commerce para el desafío Alura Geek

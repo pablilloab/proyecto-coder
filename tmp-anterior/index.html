@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenidos a la carga de articulos al Sistema</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Bienvenido a la carga de articulos</h1>
+        <ul>
+            <li>Home</li>
+            <li>Log Out</li>
+        </ul>
+    </header>
+
+
+    <form id="data">
+        <h1>Ingrese los datos del articulo</h1>
+        <input type="text" id="nombre" placeholder="Ingrese el nombre del articulo">
+        <input type="text" id="codigo" placeholder="Ingrese el codigo del articulo">
+        <input type="text" id="descripcion" placeholder="Ingrese la descripcion el articulo">
+        <input type="text" id="precio" placeholder="Ingres el precio del articulo">
+        <input type="text" id="imagen" placeholder="Ingrese la ruta de la imagen">
+        <input type="submit" id="enviar">
+
+    </form>
+
+    <h1>Listado de articulos, click para borrar</h1>
+
+    <section>
+        <button id="listar">Actualizar Lista</button>
+    </section>
+
+    <div id="product-wrapper">
+        <div id="vacio">Sin articulos</div>
+    </div>
+
+    <footer>
+        <div>
+            <img src="#" alt="">
+        </div>
+    </footer>
+
+
+
+    <script src="./main.js"></script>
+    <script src="./addProduct.js"></script>
+    <script src="./listProducts.js"></script>
+    <script src="./deleteProduct.js"></script>
+</body>
+
+</html>

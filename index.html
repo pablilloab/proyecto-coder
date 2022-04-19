@@ -5,53 +5,108 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bienvenidos a la carga de articulos al Sistema</title>
-    <link rel="stylesheet" href="./styles.css">
+    <title>Geek</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,500;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
 
 <body>
-    <header>
-        <h1>Bienvenido a la carga de articulos</h1>
-        <ul>
-            <li>Home</li>
-            <li>Log Out</li>
-        </ul>
-    </header>
 
 
-    <form id="data">
-        <h1>Ingrese los datos del articulo</h1>
-        <input type="text" id="nombre" placeholder="Ingrese el nombre del articulo">
-        <input type="text" id="codigo" placeholder="Ingrese el codigo del articulo">
-        <input type="text" id="descripcion" placeholder="Ingrese la descripcion el articulo">
-        <input type="text" id="precio" placeholder="Ingres el precio del articulo">
-        <input type="text" id="imagen" placeholder="Ingrese la ruta de la imagen">
-        <input type="submit" id="enviar">
+    <div id="modal">
+        <div id="product-info">
 
-    </form>
-
-    <h1>Listado de articulos, click para borrar</h1>
-
-    <section>
-        <button id="listar">Actualizar Lista</button>
-    </section>
-
-    <div id="product-wrapper">
-        <div id="vacio">Sin articulos</div>
-    </div>
-
-    <footer>
-        <div>
-            <img src="#" alt="">
         </div>
+
+    </div>
+    <header>
+        <nav>
+            <div>
+                <img src="./img/Logo Alura Geek.png" alt="Logo-Alura-Geek">
+                <label for="search"></label><input type="search" placeholder="¿Qué deseas buscar?">&#128269</label>
+            </div>
+            <a href="./login.html"><button>Login</button></a>
+        </nav>
+        <div id="banner">
+            <div id="info-wrapper">
+                <h1>Abril Promocional</h1>
+                <h3>Productos seleccionados con 33% de descuento</h3>
+                <button>Ver Consolas</button>
+            </div>
+
+
+        </div>
+    </header>
+    <section id="categories-wrapper">
+        <section id="main-wrapper">
+            <div id="categorie-title">
+                <h2>Star Wars</h2>
+                <a href="">Ver todo</a>
+            </div>
+            <div id="product-card-wrapper" class="star">
+
+
+            </div>
+        </section>
+
+        <section id="main-wrapper">
+            <div id="categorie-title">
+                <h2>Consolas</h2>
+                <a href="">Ver todo</a>
+            </div>
+            <div id="product-card-wrapper" class="consola">
+            </div>
+        </section>
+
+        <section id="main-wrapper">
+            <div id="categorie-title">
+                <h2>Diversos</h2>
+                <a href="">Ver todo</a>
+            </div>
+            <div id="product-card-wrapper" class="diversos">
+            </div>
+        </section>
+    </section>
+    <section id="contacto">
+        <img src="./img/Logo Alura Geek.png" alt="logo-alura-geek">
+        <div id="info">
+            <p>Quienes Somos</p>
+            <p>Politicas de privacidad</p>
+            <p>Programa de fidelidad</p>
+            <p>Nuestras tiendas</p>
+            <p>Quiero ser franquiciado</p>
+            <p>Anúncie aquí</p>
+        </div>
+        <div id="form-contacto">
+            <p>Hable con nosotros</p>
+            <input type="text" placeholder="Nombre">
+            <input type="text" placeholder="Escribe tu mensaje">
+            <button>Enviar mensaje</button>
+        </div>
+
+    </section>
+    <footer>
+        <h6>Code by Pablo Bari</h6>
+        <div>
+            <div class="img-git">
+                <a href="https://github.com/pablilloab" target="_blank"><img src="./img/github logo.png"
+                        alt="logo-git"></a>
+            </div>
+            <div class="img-link">
+                <a href="https://www.linkedin.com/in/pablo-bari-20b9a1214/" target="_blank"><img
+                        src="./img/linkedin logo.png" alt="logo-lin"></a>
+            </div>
+        </div>
+
+
     </footer>
 
 
-
-    <script src="./main.js"></script>
-    <script src="./addProduct.js"></script>
-    <script src="./listProducts.js"></script>
-    <script src="./deleteProduct.js"></script>
+    <script src="./js/main.js" type="module"></script>
+    <script src="./data/productos.js" type="module"></script>
 </body>
 
 </html>
