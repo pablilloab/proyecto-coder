@@ -6,9 +6,9 @@ let cardWrapperConsolas = document.querySelector(".consola");
 let cardWrapperDiversos = document.querySelector(".diversos");
 
 const showProducts = () => {
-    listarProductos(cardWrapperStarWars,data.starWars);
-    listarProductos(cardWrapperConsolas,data.consolas);
-    listarProductos(cardWrapperDiversos,data.diversos);    
+    data.starWars.length == 0 ? error() : listarProductos(cardWrapperStarWars,data.starWars);
+    data.consolas.length == 0 ? error() : listarProductos(cardWrapperConsolas,data.consolas);
+    data.diversos.length == 0 ? error() : listarProductos(cardWrapperDiversos,data.diversos);    
 }
 
 const listarProductos = (cardWrapper,array) => {
@@ -75,3 +75,10 @@ window.cerrarModal = () => {
     modalWrapper.style.display="none";
 }
 
+const error = () => {
+    Swal.fire({
+        icon: 'error',
+        title: 'No existen productos para mostrar',
+        text: 'Intente cargar algun articulo',        
+      })
+}

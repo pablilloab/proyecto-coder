@@ -30,18 +30,27 @@ btnEnviar.addEventListener("click", (event) => {
             newProducto.id = data.starWars.length + 1;
             data.starWars.push(newProducto);
             console.log(data.starWars);
+            ok()
             break;
         case "consola":
             newProducto.id = data.consolas.length + 1;
             data.consolas.push(newProducto);
+            ok()
             break;
         case "diversos":
             newProducto.id = data.diversos.length + 1;
             data.diversos.push(newProducto);
+            ok()
             break;    
     }
+    form.reset();
 
 
 })
 
-
+const ok = () => {
+    Swal.fire({
+        icon: 'success',
+        title: 'Articulo cargado correctamente',                
+      })
+}

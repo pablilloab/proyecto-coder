@@ -8,12 +8,10 @@ let user  = {
     pass:""
 }
 
-
+const mailformat =  /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
 
 function handleNewUser () {
-    event.preventDefault();
-
-    
+    event.preventDefault();   
 
     let name = document.newUser.name.value;
     let email = document.newUser.email.value;
@@ -24,15 +22,15 @@ function handleNewUser () {
     let error = document.getElementById("newUserStatus");
 
     if (name.length < 3) {
-        error.innerHTML = "El nombre debe tener mas de 3 caracteres";
-    } else if (email.length < 5) {
-        error.innerHTML = "El email debe tener mas de 5 caracteres"
-    } else if (isNaN(wsp)) {
-        error.innerHTML = "El Wsp debe ser un numero";
-    } else if (isNaN(dni)) {
-        error.innerHTML = "El dni debe ser un numero";
+        loginError("El nombre debe tener mas de 3 caracteres");
+    } else if (!email.match(mailformat)) {
+        loginError("El formato del email debe ser: algo@dominio.com");
+    } else if (!wsp) {
+        loginError("El Wsp debe ser un numero");
+    } else if (!dni) {
+        loginError("El dni debe ser un numero");
     } else if (pass.length < 8) {
-        error.innerHTML = "El password debe ser mayor a 8 caracteres";        
+        loginError("El password debe ser mayor a 8 caracteres");        
     } else {
         if (users.length === 0) {
             user.name = name;
@@ -53,11 +51,26 @@ function handleNewUser () {
             user.dni = dni;
             user.pass = pass;
             users.push(user);
-            error.innerHTML = "Usuario Registrado Correctamente"
-            error.style.color = "green";
+            /* error.innerHTML = "Usuario Registrado Correctamente"
+            error.style.color = "green"; */
             storeusers = JSON.stringify(users);
-            localStorage.setItem("usuarios",storeusers);            
+            localStorage.setItem("usuarios",storeusers);   
+            loginOk();         
         }
         
     }    
+}
+
+const loginError = (msj) => {
+    Swal.fire({
+        icon: 'error',
+        title: `${msj}`,              
+      })
+}
+
+const loginOk = () => {
+    Swal.fire({
+        icon: 'success',
+        title: `Usuario creado correctamente`,              
+      })
 }
