@@ -1,5 +1,6 @@
 import { data } from '../data/productos.js';
 
+
 //Renderizado de productos cargados en el archivo data.js
 let cardWrapperStarWars = document.querySelector(".star");
 let cardWrapperConsolas = document.querySelector(".consola");
@@ -49,6 +50,17 @@ window.mostrarInfo = (id, event) =>{
 
 //Funcion para renderizar info
 const crearModal = (producto) => {
+
+    //let descripcion = async () => await getDescription(producto.id);   
+
+    let descripcion="";
+    (async () => {
+        descripcion = await getDescription(producto.id);
+        console.log(descripcion)
+        
+    })()
+
+   
     let modalInfo = document.getElementById("product-info");
     let modalCard = document.createElement("div");
     modalInfo.innerHTML = "";
@@ -59,6 +71,7 @@ const crearModal = (producto) => {
         <div>
             <h1>${producto.title}</h1>
             <h2>${producto.desc}</h2>
+            <h3>El publico dice: ${descripcion}</h3>
             <h3>$ ${producto.precio}</h3>
             <button onclick="cerrarModal()">Cerrar</button>
         </div>
@@ -82,3 +95,19 @@ const error = () => {
         text: 'Intente cargar algun articulo',        
       })
 }
+
+const getDescription = async (id) => {
+    const resp = await fetch('../data/description.json')
+    const data = await resp.json()
+    
+    let opinion = "";
+    data.forEach((element) =>{ 
+       element.id == id ? opinion = element.opinion : opinion = false 
+       
+    })
+    return opinion;
+}
+
+
+
+      
