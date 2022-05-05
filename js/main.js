@@ -49,16 +49,15 @@ window.mostrarInfo = (id, event) =>{
 }
 
 //Funcion para renderizar info
-const crearModal = (producto) => {
+const crearModal = async (producto) => {
 
     //let descripcion = async () => await getDescription(producto.id);   
 
-    let descripcion="";
-    (async () => {
-        descripcion = await getDescription(producto.id);
-        console.log(descripcion)
+    
+    let descripcion = await getDescription(producto.id);
+    console.log(descripcion)
         
-    })()
+    
 
    
     let modalInfo = document.getElementById("product-info");
@@ -99,15 +98,24 @@ const error = () => {
 const getDescription = async (id) => {
     const resp = await fetch('../data/description.json')
     const data = await resp.json()
+
+    console.log(data)
     
     let opinion = "";
+    //cambiar a find
     data.forEach((element) =>{ 
+        
        element.id == id ? opinion = element.opinion : opinion = false 
        
     })
+    
     return opinion;
 }
 
 
-
-      
+//axios
+/* async function getCharacters () {
+    let response = await axios ("dir del api");
+    response = response.data.results;
+}
+       */

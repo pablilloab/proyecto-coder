@@ -3,5 +3,30 @@
         "id": 0,
         "name": "Baby Yoda",
         "opinion": "Es un muñequito fantástico! La calidad buenisima"
+    },
+    {
+        "id": 1,
+        "name": "The Clone",
+        "opinion": "Muñeco de muy mala calidad, no le doy ni un 2"
+    },
+    {
+        "id": 2,
+        "name": "Clone Head",
+        "opinion": "Unos mates barbaros salen de este cabeza"
+    },
+    {
+        "id": 3,
+        "name": "Baby Yoda",
+        "opinion": "Es un muñequito fantástico! La calidad buenisima"
+    },
+    {
+        "id": 4,
+        "name": "The Lord",
+        "opinion": "Lo compre para mi pieza y quedo barbaro!"
+    },
+    {
+        "id": 5,
+        "name": "Baby Yoda",
+        "opinion": "Son re cools, medios fragiles pero cool"
     }
 ]
