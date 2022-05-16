@@ -99,23 +99,16 @@ const getDescription = async (id) => {
     const resp = await fetch('../data/description.json')
     const data = await resp.json()
 
-    console.log(data)
-    
     let opinion = "";
-    //cambiar a find
     data.forEach((element) =>{ 
         
-       element.id == id ? opinion = element.opinion : opinion = false 
+       if (element.id == id ){
+           opinion = element.opinion;
+       }else{
+           opinion = "Todavia no tenemos opiniones de este producto."
+       }
        
     })
     
     return opinion;
 }
-
-
-//axios
-/* async function getCharacters () {
-    let response = await axios ("dir del api");
-    response = response.data.results;
-}
-       */

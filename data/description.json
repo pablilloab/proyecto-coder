@@ -2,31 +2,26 @@
     {
         "id": 0,
         "name": "Baby Yoda",
-        "opinion": "Es un muñequito fantástico! La calidad buenisima"
+        "opinion": "Opinion 0"
     },
     {
         "id": 1,
         "name": "The Clone",
-        "opinion": "Muñeco de muy mala calidad, no le doy ni un 2"
+        "opinion": "Opinion 1"
     },
     {
         "id": 2,
         "name": "Clone Head",
-        "opinion": "Unos mates barbaros salen de este cabeza"
+        "opinion": "Opinion 2"
     },
     {
         "id": 3,
-        "name": "Baby Yoda",
-        "opinion": "Es un muñequito fantástico! La calidad buenisima"
+        "name": "The Lord",
+        "opinion": "Opinion 3"
     },
     {
         "id": 4,
-        "name": "The Lord",
-        "opinion": "Lo compre para mi pieza y quedo barbaro!"
-    },
-    {
-        "id": 5,
-        "name": "Baby Yoda",
-        "opinion": "Son re cools, medios fragiles pero cool"
+        "name": "Llavero Lord Head",
+        "opinion": "Opinion 4"
     }
 ]
